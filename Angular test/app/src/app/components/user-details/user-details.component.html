@@ -1,0 +1,40 @@
+<div class="container">
+	<app-preloader *ngIf="isLoading"></app-preloader>
+</div>
+
+
+<div *ngIf="!isLoading">
+	<div class="cantainer">
+		<p-button icon="pi pi-arrow-left" [rounded]="true" [text]="true"  (click)="goBack()"/>
+	
+	
+		<div class="main">
+			<div class="profile">
+				<div class="pro-im-na">
+					<div class="img">
+						<img [src]="user.avatar" [alt]="user.first_name + ' ' + user.last_name" class="user-avatar">
+					</div>
+					<div class="name">ID: {{user.id}}</div>
+					<div class="job">First Name: {{user.first_name}}</div>
+					<div class="job">Last Name: {{user.last_name}}</div>
+					<div class="job">Email: {{user.email}}</div>
+				</div>
+				
+			</div>
+			<div class="viwer">
+				<div class="boxall">
+					<span class="value">100</span>
+					<span class="parameter">Posts</span>
+				</div>
+				<div class="boxall">
+					<span class="value">500</span>
+					<span class="parameter">Likes</span>
+				</div>
+				<div class="boxall">
+					<span class="value">200</span>
+					<span class="parameter">Follower</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

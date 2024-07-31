@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+.container {
+  z-index: 2;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  min-height: 90vh;       /* Full viewport height */
+  margin-bottom: -10vh;
+  
+  
+}
+
+.user-cards {
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;               /* Space between cards */
+  justify-content: center; /* Center the cards within the container */
+  max-width: 1200px;       /* Optional: Limit the maximum width of the cards container */
+  width: 100%;             /* Take up the full width of the parent container */
+}
+
+.user-card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+ background-color: #faf7f7;
+ background: linear-gradient(to top right, #eaf3f8 0%, #a4bdcd 100%);
+  text-align: center;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.user-card:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.user-info {
+  font-size: 14px;
+}
+
+.user-id, .user-name {
+  margin: 2px 0;
+}
+
+
+
+.name {
+  margin-top: 1vh;
+  font-size: 1.25em;
+  font-weight: 700;
+  color:#2c7fb6;
+
+  
+}
+
+.job_title {
+  font-size: 1em;
+  font-weight: bolder;
+  color: rgb(102, 102, 102);
+  
+}
+
+.job_discription {
+  font-size: 0.9em;
+  color: gray;
+  margin-top: -5vh;
+  
+}
+
+.text {
+  font-family: "Nunito", sans-serif;
+}
+.search{
+  margin-top: 5vh;
+  margin-bottom: -2vh;
+}
+
+
+
+
+
+
+
+
+.user-cards-wrapper {
+  display: flex;
+  overflow: hidden; /* Hide any overflow from sliding */
+}
+
+.slide-left {
+  animation-name: slideLeft;
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.outline {
+  background: transparent;
+  color: #2c7fb6;
+  border: 1px solid #2c7fb6;
+  transition: all .3s ease;
+  
+}
+
+.outline:hover{
+  transform: scale(1.125);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  transition: all .3s ease;  
+}
+
+

@@ -1,0 +1,42 @@
+
+
+<div class="w-25 mx-auto mt-6 search header">
+  <input [(ngModel)]="term" type="text" class="form-control" placeholder="Search by Id">
+</div>
+<div class="container context header">
+  <div class="user-cards-wrapper">
+    <div class="user-cards">
+      <div *ngFor="let user of userList|search:term" class="user-card">
+        <div [routerLink]="['/user-details',user.id]">
+          <div class="img">
+						<img [src]="user.avatar" [alt]="user.first_name + ' ' + user.last_name" class="user-avatar">
+					</div>
+          <div class="text">
+            <p class="name">ID: {{user.id}}</p>
+            <button class="btn outline"[routerLink]="['/user-details',user.id]">DETAILS</button>
+            <!--<p class="job_title">Name: {{user.first_name}}{{user.last_name}}</p>
+            <p class="job_discription">Email: {{user.email}}</p>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<p-paginator class="pageing" 
+  [rows]="rows" 
+  [totalRecords]="totalUsers" 
+  (onPageChange)="onPageChange($event)">
+</p-paginator>
+<div class="container-fluid">
+	<!-- Background animtion-->
+		<div class="background">
+		   <div class="cube"></div>
+		   <div class="cube"></div>
+		   <div class="cube"></div>
+		   <div class="cube"></div>
+		  <div class="cube"></div>
+		</div>
+  </div>
